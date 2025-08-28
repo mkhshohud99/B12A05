@@ -52,6 +52,7 @@ for (const copy of copys) {
         const copyCount = getInnerTextValue("copy-count")
         totalCopys = copyCount + 1
         document.getElementById("copy-count").innerText = totalCopys
+        
     }
     )}
 
@@ -61,6 +62,23 @@ document.getElementById("clear-btn").addEventListener("click", function () {
     historyContainer.innerText = ""
     transactionData.length = 0
 })
+//copy section
+function copyToClipBoard(id, nm_id){
+    document.getElementById(id).addEventListener("click", function () {
+    const copyText = document.getElementById(nm_id).innerText
+    navigator.clipboard.writeText(copyText)
+})
+}
+copyToClipBoard("emergency-copy-btn", "emergency-number")
+copyToClipBoard("police-copy-btn", "police-number")
+copyToClipBoard("fire-copy-btn", "fire-number")
+copyToClipBoard("ab-copy-btn", "ab-number")
+copyToClipBoard("wc-copy-btn", "wc-number")
+copyToClipBoard("ac-copy-btn", "ac-number")
+copyToClipBoard("bc-copy-btn", "bc-number")
+copyToClipBoard("eh-copy-btn", "eh-number")
+copyToClipBoard("br-copy-btn", "br-number")
+
 
 // Call Section
 // For Emergency Section
@@ -256,6 +274,7 @@ document.getElementById("br-btn").addEventListener("click", function (e) {
     transactionData.push(data)
     setHistory()
 })
+
 
 
 
