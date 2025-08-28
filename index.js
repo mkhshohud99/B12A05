@@ -1,10 +1,10 @@
-const transactionData = []
+const routingHistory = []
 
 // History Function
 function setHistory() {
     const historyContainer = document.getElementById("history-container")
     historyContainer.innerText = ""
-    for (const data of transactionData) {
+    for (const data of routingHistory) {
         const div = document.createElement("div")
         div.innerHTML = `
         <div class="flex items-center justify-between mt-5 p-2 bg-gray-100 rounded-lg">
@@ -60,7 +60,7 @@ for (const copy of copys) {
 document.getElementById("clear-btn").addEventListener("click", function () {
     const historyContainer = document.getElementById("history-container")
     historyContainer.innerText = ""
-    transactionData.length = 0
+    routingHistory.length = 0
 })
 //copy section
 function copyToClipBoard(id, nm_id){
@@ -100,7 +100,7 @@ document.getElementById("emergency-btn").addEventListener("click", function (e) 
     }
 
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 
 })
@@ -123,7 +123,7 @@ document.getElementById("police-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 
@@ -145,7 +145,7 @@ document.getElementById("fire-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 // Fire Ambulance Service
@@ -166,7 +166,7 @@ document.getElementById("ab-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 // Fire Women & Child Helpline
@@ -187,7 +187,7 @@ document.getElementById("wc-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 // Anti-Corruption Helpline
@@ -208,7 +208,7 @@ document.getElementById("ac-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 // Electricity Helpline
@@ -229,7 +229,7 @@ document.getElementById("eh-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 // Brac Helpline
@@ -250,7 +250,7 @@ document.getElementById("bc-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 // Bangladesh Railway Helpline
@@ -271,7 +271,7 @@ document.getElementById("br-btn").addEventListener("click", function (e) {
         date: new Date().toLocaleTimeString()
     }
 
-    transactionData.push(data)
+    routingHistory.push(data)
     setHistory()
 })
 
