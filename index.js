@@ -67,6 +67,7 @@ function copyToClipBoard(id, nm_id){
     document.getElementById(id).addEventListener("click", function () {
     const copyText = document.getElementById(nm_id).innerText
     navigator.clipboard.writeText(copyText)
+    alert("Number is Copied Successfully")
 })
 }
 copyToClipBoard("emergency-copy-btn", "emergency-number")
