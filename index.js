@@ -61,6 +61,8 @@ document.getElementById("clear-btn").addEventListener("click", function () {
     const historyContainer = document.getElementById("history-container")
     historyContainer.innerText = ""
     routingHistory.length = 0
+    setInnerText(100)
+
 })
 //copy section
 function copyToClipBoard(id, nm_id){
